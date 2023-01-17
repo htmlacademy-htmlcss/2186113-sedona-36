@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Ира Петуховская](https://up.htmlacademy.ru/htmlcss/36/user/2186113).
-* Наставник: `Неизвестно`.
+* Наставник: [Евгений Петров](https://up.htmlacademy.ru/profession/frontender/15/htmlcss/36/user/617077).
 
 ---
 
