@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
@@ -23,15 +23,12 @@ body {
 }
 
 /* Страницы */
-
 .main-header {
   color: #000000;
   background-color: #ffffff;
 }
 
 .navigation-link {
-  font-family: "PT Sans";
-  font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -41,8 +38,6 @@ body {
 }
 
 .navigation-link-form {
-  font-family: "PT Sans";
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -61,25 +56,16 @@ body {
 }
 
 .advantages-description-town {
-  font-family: "PT Sans";
-  font-style: normal;
   font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #000000;
 }
 
 .advantages-reasons {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
   color: inherit;
 }
+
 .advantages,
 .interest,
 .subscribe,
@@ -89,19 +75,23 @@ body {
 
 .advantages-title,
 .recommendation-list-title {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
   color: #000000;
 }
+
+.advantages-title-one,
+.advantages-title-five {
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
 .advantages-description {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
@@ -109,9 +99,6 @@ body {
 }
 
 .recommendation-text {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
@@ -119,9 +106,6 @@ body {
 }
 
 .recommendation-list-description {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
@@ -129,42 +113,39 @@ body {
 }
 
 .interest-title,
-
-.recommendation-title,
-.advantages-description-town {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 700;
+.recommendation-title {
   font-size: 30px;
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
   color: #000000;
 }
+
+.advantages-description-town {
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
 .subscribe-title-main {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  color: #FFFFFF;
-
+  color: #ffffff;
 }
-
 
 .interest-conditions,
 .subscribe-description {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   color: inherit;
 }
+
 .interest-button-search,
 .subscribe-button {
-  font-family: "PT Sans";
+  font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -174,17 +155,19 @@ body {
   text-transform: uppercase;
   color: #ffffff;
 }
+
 .interest-button-search {
   background: #756157;
   border-radius: 4px;
 }
+
 .subscribe-button {
   background: #82b3d3;
   border-radius: 0px 4px 4px 0px;
 }
 
 .subscribe-email {
-  font-family: "PT Sans";
+  font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -192,6 +175,7 @@ body {
   align-items: center;
   color: #000000;
 }
+
 .subscribe {
   background-image: url("../images/Subscribe.png");
   background-size: 100% auto;
@@ -199,23 +183,19 @@ body {
   color: #ffffff;
 }
 
-.subscribe-title {
-  color: #ffffff;
-}
-
 .footer-phone {
   text-align: center;
 }
+
 .footer-contacts-phone {
-  font-family: "PT Sans";
   font-style: normal;
-  font-weight: 400;
   font-size: 40px;
   line-height: 40px;
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
 }
+
 .advantages-item-one,
 .advantages-item-five {
   background-color: #82b3d3;
@@ -236,11 +216,6 @@ body {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.advantages-title-one,
-.advantages-title-five {
-  color: #ffffff;
-}
-
 /* Каталог */
 .inner-header {
   background-image: url("../images/catalog/filtre-background.png");
@@ -249,24 +224,8 @@ body {
   color: #ffffff;
 }
 
-.subscribe-catalog {
-  text-align: center;
-}
-
-.subscribe-title,
-.subscribe-cstalog-title {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #000000;
-}
-
 .button-apply {
-  font-family: "PT Sans";
+  font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -276,14 +235,13 @@ body {
   background-color: #82b3d3;
   color: #ffffff;
 }
+
 .button-reset {
   border: none;
   background-color: transparent;
 }
 
 .search-title {
-  font-family: "PT Sans";
-  font-style: normal;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -292,7 +250,7 @@ body {
 }
 
 .select-control {
-  font-family: "PT Sans";
+  font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -305,25 +263,19 @@ body {
 }
 
 .product-card-title {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   color: #000000;
 }
+
 .product-card-category,
 .product-card-price {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   color: inherit;
 }
+
 .product-card-button-more {
-  font-family: "PT Sans";
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -334,8 +286,9 @@ body {
   text-decoration: none;
   color: #ffffff;
 }
+
 .product-card-button-wishlist {
-  font-family: "PT Sans";
+  font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -347,10 +300,9 @@ body {
   text-decoration: none;
   color: #ffffff;
 }
+
 .product-card-button-wishlist-rady,
 .button-active {
-  font-family: "PT Sans";
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -361,10 +313,8 @@ body {
   background: #7db54f;
   border-radius: 4px;
 }
+
 .product-rating {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
@@ -374,40 +324,37 @@ body {
   color: inherit;
 }
 
-a.pagination-current {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #000000;
-  background: #f2f2f2;
-  border-radius: 4px;
-}
-
 .pagination-link {
-  font-family: "PT Sans";
-  font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
   background: #82b3d3;
   border-radius: 4px;
   color: #ffffff;
 }
 
+.pagination-current {
+  color: #000000;
+  background: #f2f2f2;
+  border-radius: 4px;
+}
+
 .pagination-dots {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
-  display: flex;
-  align-items: center;
+  color: #000000;
+}
+
+.subscribe-catalog {
   text-align: center;
+}
+
+.subscribe-title,
+.subscribe-cstalog-title {
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
   color: #000000;
 }
