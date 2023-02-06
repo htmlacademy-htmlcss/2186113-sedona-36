@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
+    <div class="page-container">
     <header class="main-header">
       <nav class="navigation">
         <a class="site-logo" href="index.html">
@@ -46,7 +47,7 @@
         </ul>
       </nav>
     </header>
-    <main class="main-inner">
+    <main class="main-container main-inner">
       <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
         <ol class="breadcrumbs">
@@ -174,6 +175,7 @@
         </form>
       </header>
       <section class="catalog">
+        <div class="search-block">
         <p class="search-title">
           Найдено гостиниц:
           <span class="search-result">38</span>
@@ -192,7 +194,9 @@
         <a class="button button-list" href="#">
           <span class="visually-hidden">Показать список</span>
         </a>
-        <ol class="product-list">
+      </div>
+      <div class="product-card-container">
+      <ol class="product-list">
           <li class="product-card">
             <a class="product-card-link" href="#">
               <img
@@ -306,8 +310,9 @@
             <span class="product-rating">Рейтинг: 5,0</span>
           </li>
         </ol>
-      </section>
-      <ol class="pagination">
+      </div>
+      <hr>
+       <ol class="pagination">
         <li class="pagination-item">
           <a class="pagination-link pagination-current">1</a>
         </li>
@@ -327,6 +332,7 @@
           <a class="pagination-link" href="#">10</a>
         </li>
       </ol>
+    </section>
       <section class="subscribe-catalog">
         <h2 class="subscribe-cstalog-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-description">
@@ -389,5 +395,6 @@
         /></a>
       </div>
     </footer>
+  </div>
   </body>
 </html>
