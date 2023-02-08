@@ -1,0 +1,500 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+/*.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  }*/
+
+hr {
+  width: 1060px;
+  height: 0;
+  border: 1px solid #e6e6e6;
+}
+
+.page-container {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+/* Страницы */
+.main-header {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.page-header-logo {
+  width: 138px;
+  margin-left: 70px;
+  margin-right: 44px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.navigation-link {
+  width: 450px;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+  color: #000000;
+  text-decoration: none;
+}
+
+.navigation-link-form {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  background: #756157;
+  text-decoration: none;
+}
+
+.navigation-user {
+  width: 310px;
+  margin-left: auto;
+}
+
+.navigation-list,
+.pagination,
+.footer-social-list {
+  list-style: none;
+}
+
+.hero {
+  background-image: url("../images/index-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.hero-logo-sedona {
+  display: block;
+  margin: 0 auto;
+}
+
+.advantages-description-town {
+  font-weight: 700;
+}
+
+.advantages-reasons {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: inherit;
+}
+
+.advantages,
+.interest,
+.subscribe,
+.recommendation {
+  text-align: center;
+}
+
+.advantages-title,
+.recommendation-list-title {
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.advantages-title-one,
+.advantages-title-five {
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.advantages-description {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: inherit;
+}
+
+.advantages-item-row-one {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages-three-columns {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.recommendation-text {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: inherit;
+}
+
+.recommendation-list-description {
+  font-size: 18px;
+  line-height: 21px;
+  color: inherit;
+}
+
+.recommendation-list {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.interest-title,
+.recommendation-title {
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.advantages-description-town {
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.subscribe-title-main {
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.interest-conditions,
+.subscribe-description {
+  font-size: 22px;
+  line-height: 26px;
+  color: inherit;
+}
+
+.interest-button-search,
+.subscribe-button {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.interest-button-search {
+  background: #756157;
+  border-radius: 4px;
+}
+
+.subscribe-button {
+  background: #82b3d3;
+  border-radius: 0 4px 4px 0;
+}
+
+.subscribe-email {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  align-items: center;
+  color: #000000;
+}
+
+.subscribe {
+  background-image: url("../images/Subscribe.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.advantages-list {
+  margin: 0 auto;
+}
+
+.advantages-item-one,
+.advantages-item-five {
+  background-color: #82b3d3;
+  color: #ffffff;
+}
+
+.advantages-item-two,
+.recommendation-item-one,
+.recommendation-item-three {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item-three {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item-four {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+/* Каталог */
+.inner-header {
+  background-image: url("../images/catalog/filtre-background.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.catalog {
+  margin: 0 70px;
+}
+
+.catalog-filter {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.button-apply {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #82b3d3;
+  color: #ffffff;
+}
+
+.button-reset {
+  border: none;
+  background-color: transparent;
+}
+
+.search-block {
+  display: flex;
+}
+
+.search-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.select-control {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: inherit;
+}
+
+/*Карточки каталога*/
+.product-list {
+  list-style: none;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  width: 340px;
+  height: 438px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+}
+
+.product-card-link {
+  text-decoration: none;
+}
+
+.product-card-title {
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.product-card-category,
+.product-card-price {
+  font-size: 18px;
+  line-height: 21px;
+  color: inherit;
+}
+
+.product-card-button-more {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  background: #756157;
+  border-radius: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.product-card-button-wishlist {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  background: #82b3d3;
+  border-radius: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.product-card-button-wishlist-rady,
+.button-active {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  background: #7db54f;
+  border-radius: 4px;
+}
+
+.product-rating {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  background: #f2f2f2;
+  border-radius: 4px;
+  color: inherit;
+}
+
+/*Пагинация каталога*/
+.pagination {
+  display: flex;
+}
+
+.pagination-link {
+  margin-top: 40px;
+  margin-right: 8px;
+  padding: 12px 25px 13px 24px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #82b3d3;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+.pagination-dots {
+  padding: 18px 30px;
+}
+
+.pagination-current {
+  color: #000000;
+  background: #f2f2f2;
+  border-radius: 4px;
+}
+
+.pagination-dots {
+  color: #000000;
+}
+
+/*Подписаться на рыссылку*/
+.subscribe-catalog {
+  text-align: center;
+}
+
+.subscribe-title,
+.subscribe-cstalog-title {
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/*Футер*/
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.footer-contacts-phone {
+  font-style: normal;
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+}
