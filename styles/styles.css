@@ -45,7 +45,7 @@ body {
 
 hr {
   width: 1060px;
-  height: 0px;
+  height: 0;
   border: 1px solid #e6e6e6;
 }
 
@@ -166,14 +166,12 @@ hr {
 
 .advantages-item-row-one {
   display: flex;
-  justify-content: row;
   margin: 0;
   padding: 0;
 }
 
 .advantages-three-columns {
   display: flex;
-  justify-content: row;
   margin: 0;
   padding: 0;
 }
@@ -250,7 +248,7 @@ hr {
 
 .subscribe-button {
   background: #82b3d3;
-  border-radius: 0px 4px 4px 0px;
+  border-radius: 0 4px 4px 0;
 }
 
 .subscribe-email {
@@ -351,7 +349,12 @@ hr {
 
 /*Карточки каталога*/
 .product-list {
+  list-style: none;
+}
+
+.product-list {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 
