@@ -30,25 +30,6 @@ body {
   background-color: #ffffff;
 }
 
-/*.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-  }*/
-
-hr {
-  width: 1060px;
-  height: 0;
-  border: 1px solid #e6e6e6;
-}
-
 .page-container {
   margin: 0 auto;
   width: 1200px;
@@ -354,7 +335,7 @@ hr {
 
 .product-list {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -431,6 +412,11 @@ hr {
   background: #f2f2f2;
   border-radius: 4px;
   color: inherit;
+}
+
+.product-card-container {
+  margin: 40px 0;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 /*Пагинация каталога*/
