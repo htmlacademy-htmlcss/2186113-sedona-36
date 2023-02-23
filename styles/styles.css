@@ -464,10 +464,6 @@ body {
   padding: 0;
 }
 
-.price {
- margin-left: 70px;
-}
-
 .amount-block {
   margin-top: 32px;
   display: flex;
@@ -620,9 +616,7 @@ body {
 }
 
 .product-card-title {
-  margin: 0;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin: 16px 0;
   font-size: 24px;
   line-height: 28px;
   color: #000000;
