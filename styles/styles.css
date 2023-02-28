@@ -80,8 +80,7 @@ body {
 }
 
 .navigation-user .navigation-link {
-  min-width: 16px;
-  min-height: 22px;
+  padding: 22px 13px;
 }
 
 .navigation-link:focus {
@@ -92,20 +91,18 @@ body {
   border-bottom: 2px solid #756257;
 }
 
-.navigation-user .navigation-item:nth-child(1) .navigation-link {
-  padding: 22px 12px;
-  background-image: url("../images/icons/search.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.search-link:focus {
+  border-bottom:none;
 }
 
-.navigation-user .navigation-item:nth-child(2) .navigation-link {
-  margin-right: 20px;
-  padding: 22px 12px;
-  background-image: url("../images/icons/heart.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.wishlist-link:focus {
+  border-bottom:none;
 }
+
+.navigation-search,
+.navigation-wishlist {
+  fill:#000000;
+  }
 
 .notification-badge {
   position: absolute;
@@ -126,7 +123,7 @@ body {
 
 .navigation-link-form {
   display: inline-block;
-  margin: 14px 0;
+  margin: 14px 0 0 20px;
   padding: 8px 34px;
   font-weight: 700;
   font-size: 16px;
