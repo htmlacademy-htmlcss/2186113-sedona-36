@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Каталог гостиниц Седона</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
@@ -91,23 +92,28 @@
                   focusable="false"
                   xmlns="http://www.w3.org/2000/svg"
                   width="13"
-                  height="12"
+                  height="13"
                   fill="none"
-                  viewBox="0 0 13 12"
+                  viewBox="0 0 13 13"
                 >
                   <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
-                    d="m6.393 0-6 5.8V12h12V5.8l-6-5.8Zm5 11h-10V6.2l5-4.8 5 4.8V11Z"
+                    d="m6.5.5-6 5.8v6.2h12V6.3L6.5.5Zm5 11h-10V6.7l5-4.8 5 4.8v4.8Z"
                   />
                   <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
-                    d="M4.393 10h1V7.5h2V10h1V6.5h-4V10Z"
+                    d="M4.5 10.5h1V8h2v2.5h1V7h-4v3.5Z"
                   />
                 </svg>
                 <span class="visually-hidden">Главная</span>
               </a>
+            </li>
+            <li class="breadcrumbs-item">
+              <img
+                class="breadcrumbs-item-arrow"
+                src="images/icons/arrow.svg" alt="Навигационная стрелка.">
             </li>
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link">Гостиницы</a>
@@ -125,30 +131,35 @@
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input
-                      class="control-input"
+                      class="visually-hidden control-input"
                       type="checkbox"
                       name="swimming-pool"
                       checked
                     />
-                    Бассейн
-                  </label>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Бассейн</span>
+                 </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input
-                      class="control-input"
+                      class="visually-hidden control-input"
                       type="checkbox"
                       name="parking"
                       checked
                     />
-                    Парковка
-                  </label>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Парковка</span>
+                    </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="wi-fi" />
-                    Wi-Fi
-                  </label>
+                    <input class="visually-hidden control-input"
+                    type="checkbox"
+                    name="wi-fi" />
+                    <span class="control-mark"></span>
+                    <span class="control-label">Wi-Fi</span>
+                    </label>
                 </li>
               </ul>
             </fieldset>
@@ -158,35 +169,38 @@
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input
-                      class="control-input"
+                      class=" visually-hidden control-input"
                       type="radio"
                       name="product-group"
                       value="hotel"
                       checked
                     />
-                    Гостиница
+                    <span class="control-mark radio-mark"></span>
+                    <span class="control-label">Гостиница</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input
-                      class="control-input"
+                      class="visually-hidden control-input"
                       type="radio"
                       name="product-group"
                       value="motel"
                     />
-                    Мотель
+                    <span class="control-mark radio-mark"></span>
+                    <span class="control-label">Мотель</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input
-                      class="control-input"
+                      class="visually-hidden control-input"
                       type="radio"
                       name="product-group"
                       value="apartments"
                     />
-                    Апартаменты
+                    <span class="control-mark radio-mark"></span>
+                    <span class="control-label">Апартаменты</span>
                   </label>
                 </li>
               </ul>
@@ -195,31 +209,36 @@
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
               <div class="amount-block">
                 <label class="amount">
-                  <input class="amount-input-one" type="text"
-                  name="minimum-value-summ" placeholder="0 от"
+                  <input
+                    class="amount-input-one"
+                    type="number"
+                    name="minimum-value-summ"
+                    placeholder="0"
+                  />
+                  <span class="from">от</span>
                 </label>
                 <label class="amount">
                   <input
                     class="amount-input-two"
-                    type="text"
+                    type="number"
                     name="maximum-value-summ"
-                    placeholder="9000 до"
+                    placeholder="9000"
                   />
+                  <span class="from">до</span>
                 </label>
               </div>
               <div class="range-block">
-                <label class="range">
-                  <input
-                    class="range-input"
-                    type="range"
-                    name="range-price"
-                    multiple
-                    min="0"
-                    max="15000"
-                    value="9000"
-                  />
-                </label>
+                <div class="range-scale">
+                  <div class="range-bar" style="left: 0; width: 266px">
+                    <button class="range-toggle toggle-min">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+                    <button class="range-toggle toggle-max">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
+                  </div>
               </div>
+            </div>
             </fieldset>
             <div class="buttons-filter-inner">
               <button class="button button-apply" type="submit">
@@ -235,11 +254,13 @@
               Найдено гостиниц:
               <span class="search-result">38</span>
             </p>
-            <select class="select-control" aria-label="Сортировка">
-              <option value="cheap">Сначала дешевые</option>
-              <option value="expensive">Сначала дорогие</option>
-              <option value="popular">Сначала популярные</option>
-            </select>
+            <div class="select-control-block">
+              <select class="select-control" aria-label="Сортировка">
+                <option value="cheap">Сначала дешевые</option>
+                <option value="expensive">Сначала дорогие</option>
+                <option value="popular">Сначала популярные</option>
+              </select>
+            </div>
             <a href="#" class="button button-active-list">
               <svg
                 class="filter-active-list"
@@ -323,15 +344,81 @@
                     В избранное
                   </button>
                 </div>
-
                 <div class="product-rating-area">
-                  <img
-                    src="images/catalog/rating-4.svg"
-                    width="140"
-                    height="37"
-                    alt="Звездный рейтинг 8,5."
-                    class="product-star-rating"
-                  />
+                  <div class="rating-star-block">
+                    <span class="rating-stars">
+                      <svg
+                        class="rating-star-card"
+                        aria-hidden="true"
+                        focusable="false"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="17"
+                        fill="none"
+                        viewBox="0 0 18 17"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="rating-stars">
+                      <svg
+                        class="rating-star-card"
+                        aria-hidden="true"
+                        focusable="false"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="17"
+                        fill="none"
+                        viewBox="0 0 18 17"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="rating-stars">
+                      <svg
+                        class="rating-star-card"
+                        aria-hidden="true"
+                        focusable="false"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="17"
+                        fill="none"
+                        viewBox="0 0 18 17"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="rating-stars">
+                      <svg
+                        class="rating-star-card"
+                        aria-hidden="true"
+                        focusable="false"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="17"
+                        fill="none"
+                        viewBox="0 0 18 17"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
                   <span class="product-rating">Рейтинг: 8,5</span>
                 </div>
               </li>
@@ -362,13 +449,80 @@
                 </div>
 
                 <div class="product-rating-area">
-                  <img
-                    src="images/catalog/rating-4.svg"
-                    width="140"
-                    height="37"
-                    alt="Звездный рейтинг 9,2."
-                    class="product-star-rating"
-                  />
+                  <div class="rating-star-block">
+                    <span class="rating-stars">
+                      <svg
+                        class="rating-star-card"
+                        aria-hidden="true"
+                        focusable="false"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="17"
+                        fill="none"
+                        viewBox="0 0 18 17"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="rating-stars">
+                      <svg
+                        class="rating-star-card"
+                        aria-hidden="true"
+                        focusable="false"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="17"
+                        fill="none"
+                        viewBox="0 0 18 17"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="rating-stars">
+                      <svg
+                        class="rating-star-card"
+                        aria-hidden="true"
+                        focusable="false"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="17"
+                        fill="none"
+                        viewBox="0 0 18 17"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="rating-stars">
+                      <svg
+                        class="rating-star-card"
+                        aria-hidden="true"
+                        focusable="false"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="17"
+                        fill="none"
+                        viewBox="0 0 18 17"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
                   <span class="product-rating">Рейтинг: 9,2</span>
                 </div>
               </li>
@@ -397,13 +551,62 @@
                 </div>
 
                 <div class="product-rating-area">
-                  <img
-                    src="images/catalog/rating-3.svg"
-                    width="140"
-                    height="37"
-                    alt="Звездный рейтинг 6,9."
-                    class="product-star-rating"
-                  />
+                  <div class="rating-star-block">
+                    <span class="rating-stars">
+                      <svg
+                        class="rating-star-card"
+                        aria-hidden="true"
+                        focusable="false"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="17"
+                        fill="none"
+                        viewBox="0 0 18 17"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="rating-stars">
+                      <svg
+                        class="rating-star-card"
+                        aria-hidden="true"
+                        focusable="false"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="17"
+                        fill="none"
+                        viewBox="0 0 18 17"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="rating-stars">
+                      <svg
+                        class="rating-star-card"
+                        aria-hidden="true"
+                        focusable="false"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="17"
+                        fill="none"
+                        viewBox="0 0 18 17"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
                   <span class="product-rating">Рейтинг: 6,9</span>
                 </div>
               </li>
@@ -431,13 +634,44 @@
                   </button>
                 </div>
                 <div class="product-rating-area">
-                  <img
-                    src="images/catalog/rating-2.svg"
-                    width="140"
-                    height="37"
-                    alt="Звездный рейтинг 5."
-                    class="product-star-rating"
-                  />
+                  <div class="rating-star-block">
+                    <span class="rating-stars">
+                      <svg
+                        class="rating-star-card"
+                        aria-hidden="true"
+                        focusable="false"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="17"
+                        fill="none"
+                        viewBox="0 0 18 17"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="rating-stars">
+                      <svg
+                        class="rating-star-card"
+                        aria-hidden="true"
+                        focusable="false"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="17"
+                        fill="none"
+                        viewBox="0 0 18 17"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
                   <span class="product-rating">Рейтинг: 5,0</span>
                 </div>
               </li>
