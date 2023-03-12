@@ -46,6 +46,7 @@ body {
 .page-container {
   margin: 0 auto;
   width: 1200px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .main-container {
@@ -69,8 +70,10 @@ body {
 }
 
 .navigation-link {
+  font-family: "PT Sans", "Arial", sans-serif;
   display: inline-block;
-  padding: 20px 16px;
+  padding: 26px 0;
+  margin: 0 16px;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -79,19 +82,19 @@ body {
   text-decoration: none;
 }
 
-.navigation-user .navigation-link {
-  position: relative;
-  padding: 22px 13px;
-}
-
 .navigation-link:focus,
-.navigation-link:active {
+.navigation-link:active,
+.navigation-link-active {
   border-bottom: 2px solid #756257;
 }
 
 .search-link:focus,
 .search-link:active {
   border-bottom: none;
+}
+
+.wishlist-link {
+  position: relative;
 }
 
 .wishlist-link:focus,
@@ -108,8 +111,8 @@ body {
   position: absolute;
   width: 11px;
   height: 10px;
-  left: 22px;
-  top: 11px;
+  left: 10px;
+  top: 16px;
   padding: 5px;
   text-decoration: none;
   font-weight: 400;
@@ -123,7 +126,7 @@ body {
 
 .navigation-link-form {
   display: inline-block;
-  margin: 14px 0 0 20px;
+  margin: 0 0 0 20px;
   padding: 8px 34px;
   font-weight: 700;
   font-size: 16px;
@@ -162,13 +165,10 @@ body {
   background: #e5e5e5;
 }
 
-.pagination {
-  list-style-type: none;
-}
-
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   margin: 0;
   margin-right: 70px;
   padding: 0;
@@ -178,10 +178,6 @@ body {
 .navigation-user {
   max-width: 300px;
   margin-left: auto;
-}
-
-.footer-social {
-  margin-left: 70px;
 }
 
 .footer-social-list {
@@ -257,14 +253,9 @@ body {
   margin-top: 25px;
 }
 
-.advantages-description-town {
-  font-weight: 700;
-}
-
 .advantages-reasons {
-  margin: 0;
-  margin-top: 25px;
-  padding: 0 274px 69px;
+  margin-top: 0;
+  margin-bottom: 70px;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
@@ -284,7 +275,6 @@ body {
   justify-content: center;
 }
 
-.advantages-title,
 .recommendation-list-title {
   margin: 0;
   padding: 30px 85px;
@@ -295,14 +285,31 @@ body {
 }
 
 .advantages-title {
+  position: relative;
   margin: 0;
-  padding: 112px 112px 30px;
+  padding-bottom: 30px;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.advantages-title::after {
+  position: absolute;
+  content: '';
+  width: 60px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.3);
+  left: 35%;
+  bottom: 0;
 }
 
 .advantages-title-one,
 .advantages-title-five {
+  position: relative;
   margin: 0;
-  padding: 102px 114px 30px;
+  padding-bottom: 30px;
   font-size: 24px;
   line-height: 28px;
   text-align: center;
@@ -310,27 +317,20 @@ body {
   color: #ffffff;
 }
 
-.divider-line {
+.advantages-title-one::after,
+.advantages-title-five::after {
   position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  content: '';
   width: 60px;
   height: 2px;
   background: rgba(255, 255, 255, 0.3);
-}
-
-.divider-line-two {
-  position: absolute;
-  top: 51%;
-  transform: translate(-50%, -50%);
-  width: 60px;
-  height: 2px;
-  background: rgba(0, 0, 0, 0.3);
+  left: 35%;
+  bottom: 0;
 }
 
 .advantages-description {
-  margin: 0;
-  padding: 30px 85px 0 85px;
+  margin-top: 30px;
+  margin-bottom: 0;
   font-size: 18px;
   line-height: 21px;
   color: inherit;
@@ -373,8 +373,8 @@ body {
 }
 
 .recommendation-text {
-  margin: 0;
-  padding: 0 0 64px;
+  margin-top: 0;
+  margin-bottom: 64px;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
@@ -390,8 +390,8 @@ body {
 }
 
 .interest-title {
-  margin: 0;
-  padding: 96px 0 20px 0;
+  margin-top: 96px;
+  margin-bottom: 20px;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
@@ -400,8 +400,8 @@ body {
 }
 
 .recommendation-title {
-  margin: 0;
-  padding: 64px 348px 20px;
+  margin-top: 64px;
+  margin-bottom: 20px;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
@@ -410,13 +410,14 @@ body {
 }
 
 .advantages-description-town {
-  margin: 0;
-  padding: 69px 290px 0;
+  margin-top: 70px;
+  margin-bottom: 25px;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
   color: #000000;
+  font-weight: 700;
 }
 
 .subscribe-title-main {
@@ -429,8 +430,7 @@ body {
 }
 
 .interest-conditions {
-  margin: 0;
-  padding: 20px 0 54px;
+  margin: 0 auto 54px auto;
   font-size: 22px;
   line-height: 26px;
   color: inherit;
@@ -444,12 +444,11 @@ body {
   color: inherit;
 }
 
-.interest-conditions {
-  padding: 0 304px;
-}
-
 .interest-button-search {
   display: block;
+  margin: 0 auto 96px auto;
+  padding: 8px 50px;
+  background: #756157;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 20px;
@@ -458,6 +457,7 @@ body {
   color: #ffffff;
   border: none;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .subscribe-button {
@@ -487,18 +487,6 @@ body {
   background: #e5e5e5;
 }
 
-.interest-button-search {
-  margin: 54px 0 96px;
-  padding: 8px 50px;
-  background: #756157;
-  border-radius: 4px;
-  border: none;
-  position: relative;
-  left: 50%;
-  transform: translate(-50%, 0);
-  cursor: pointer;
-}
-
 .subscribe-email {
   font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
@@ -515,6 +503,7 @@ body {
   background-size: 100% auto;
   background-repeat: no-repeat;
   color: #ffffff;
+  height: 415px;
 }
 
 .advantages-list {
@@ -531,6 +520,8 @@ body {
   position: relative;
   width: 400px;
   min-height: 385px;
+  padding: 102px 85px;
+  box-sizing: border-box;
 }
 
 .advantages-item-five-block {
@@ -554,6 +545,8 @@ body {
   position: relative;
   width: 400px;
   min-height: 385px;
+  padding: 102px 80px;
+  box-sizing: border-box;
 }
 
 .advantages-item-two,
@@ -579,7 +572,7 @@ body {
 
 /* Каталог */
 .inner-header {
-  padding: 35px 70px 73px;
+  padding: 35px 70px 73px 70px;
   background-image: url("../images/catalog/filtre-background.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -588,8 +581,7 @@ body {
 
 .breadcrumbs {
   display: flex;
-  margin: 0;
-  margin-top: 8px;
+  margin-top: 0;
   margin-bottom: 40px;
   padding: 0;
   font-size: 16px;
@@ -684,7 +676,6 @@ body {
 .amount-input-one {
   padding: 12px 20px;
   width: 143px;
-  height: 48px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -694,6 +685,7 @@ body {
   border: none;
   background: #f2f2f2;
   border-radius: 4px 0 0 4px;
+  outline: none;
 }
 
 .amount-input-one:hover {
@@ -703,13 +695,13 @@ body {
 
 .amount-input-one:focus {
   background: #e6e6e6;
-  border: 3px solid #83b3d3;
+  box-shadow: 0 0 0 3px #83b3d3;
   border-radius: 4px 0 0 4px;
 }
 
 .amount-input-one:active {
   background: #f2f2f2;
-  border: 2px solid #000000;
+  box-shadow: 0 0 0 2px #000000;
   border-radius: 4px 0 0 4px;
 }
 
@@ -717,7 +709,6 @@ body {
   margin-left: 2px;
   padding: 12px 20px;
   width: 143px;
-  height: 48px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -727,6 +718,7 @@ body {
   border: none;
   background: #f2f2f2;
   border-radius: 0 4px 4px 0;
+  outline: none;
 }
 
 .amount-input-two:hover {
@@ -736,13 +728,13 @@ body {
 
 .amount-input-two:focus {
   background: #e6e6e6;
-  border: 3px solid #83b3d3;
+  box-shadow: 0 0 0 3px #83b3d3;
   border-radius: 0 4px 4px 0;
 }
 
 .amount-input-two:active {
   background: #f2f2f2;
-  border: 2px solid #000000;
+  box-shadow: 0 0 0 2px #000000;
   border-radius: 0 4px 4px 0;
 }
 
@@ -765,7 +757,7 @@ input::-webkit-inner-spin-button {
 .amount .from {
   position: absolute;
   left: 145px;
-  top: 30%;
+  top: 20%;
   font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -789,7 +781,8 @@ input::-webkit-inner-spin-button {
   width: 20px;
   height: 20px;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .radio-mark {
@@ -799,7 +792,8 @@ input::-webkit-inner-spin-button {
   width: 20px;
   height: 20px;
   background: #ffffff;
-  border-radius: 50px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .control:hover .control-mark {
@@ -807,18 +801,15 @@ input::-webkit-inner-spin-button {
 }
 
 .control:focus .control-mark {
-  border: 3px solid #83b3d3;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
 }
 
 .control:active .control-mark {
-  border: 2px solid #83b3d3;
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
-  border-radius: 5px;
 }
 
-.control-input:disabled + .control-mark {
+.control-input:disabled + .control-mark,
+.control-input:disabled .radio-mark {
   border-color: #242424;
 }
 
@@ -974,12 +965,13 @@ input::-webkit-inner-spin-button {
 }
 
 .button-reset:hover {
-  color: rgba(255, 255, 255, 1);
+  fill: #ffffff;
+  opacity: 0.6;
 }
 
 .button-reset:focus {
   fill: #ffffff;
-  border: 3px solid #83b3d3;
+  box-shadow: 0 0 0 3px #83b3d3;
 }
 
 .button-reset:active {
@@ -1103,6 +1095,9 @@ input::-webkit-inner-spin-button {
 /*Карточки каталога*/
 .inner-header-title {
   margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 60px;
+  line-height: 78px;
 }
 
 .product-card-container {
@@ -1292,12 +1287,13 @@ input::-webkit-inner-spin-button {
 .pagination {
   display: flex;
   margin: 40px 0 60px;
+  padding-left: 0;
+  list-style-type: none;
 }
 
 .pagination-link {
-  margin-top: 40px;
   margin-right: 8px;
-  padding: 12px 25px 13px 24px;
+  padding: 12px 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -1307,6 +1303,10 @@ input::-webkit-inner-spin-button {
   background: #82b3d3;
   border-radius: 4px;
   color: #ffffff;
+  display: block;
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
 }
 
 .pagination-link:hover {
@@ -1326,7 +1326,9 @@ input::-webkit-inner-spin-button {
 }
 
 .pagination-dots {
+  display: block;
   padding: 18px 30px;
+  color: #000000;
 }
 
 .pagination-current {
@@ -1347,6 +1349,7 @@ input::-webkit-inner-spin-button {
 /*Подписаться на рыссылку*/
 .subscribe-catalog {
   text-align: center;
+  height: 415px;
 }
 
 .subscribe-catalog-title {
@@ -1400,26 +1403,28 @@ input::-webkit-inner-spin-button {
   border: 2px solid #000000;
 }
 
+.field-email:disabled {
+  background: #e5e5e5;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
 /*Футер*/
 .page-footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0;
-  padding: 45px 0 35px;
+  padding: 45px 70px 45px 80px;
 }
 
 .footer-contacts-phone {
-  margin: 0 234px 0 237px;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-size: 40px;
   line-height: 40px;
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
-}
-
-.footer-logo-block {
-  margin-right: 70px;
 }
 
 /*Модальное окно*/
@@ -1470,7 +1475,7 @@ input::-webkit-inner-spin-button {
   background: #f2f2f2;
   border: none;
   border-radius: 50px;
-  background-image: url("/images/close-button.svg");
+  background-image: url("../images/close-button.svg");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -1489,7 +1494,7 @@ input::-webkit-inner-spin-button {
   background: #e6e6e6;
   border: none;
   border-radius: 50px;
-  background-image: url("/images/close-button.svg");
+  background-image: url("../images/close-button.svg");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -1694,7 +1699,21 @@ input::-webkit-inner-spin-button {
   display: block;
   width: 100%;
   height: 100%;
-  color: #83b3d3;
+  fill: #83b3d3;
+}
+
+.tooltip-icon:hover,
+.tooltip-icon:focus {
+  fill: #68a2ca;
+}
+
+.tooltip-icon:focus {
+  fill: #68a2ca;
+}
+
+.tooltip-icon:active {
+  color: rgba(255, 255, 255, 0.3);
+  fill: #83b3d3;
 }
 
 .tooltip {
@@ -1797,6 +1816,6 @@ input::-webkit-inner-spin-button {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.modal-container {
+.modal-container-hide {
   display: none;
 }
