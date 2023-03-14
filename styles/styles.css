@@ -57,12 +57,16 @@ body {
 .main-header {
   color: #000000;
   background-color: #ffffff;
-}
+  }
 
 .page-header-logo {
+  display: block;
   width: 140px;
-  height: 70px;
   padding: 0 28px 0 70px;
+}
+
+.site-logo {
+  display: block;
 }
 
 .navigation {
@@ -107,11 +111,16 @@ body {
   fill: #000000;
 }
 
+.navigation-user-link {
+  margin: 0;
+  padding: 26px 16px;
+}
+
 .notification-badge {
   position: absolute;
   width: 11px;
   height: 10px;
-  left: 10px;
+  left: 25px;
   top: 16px;
   padding: 5px;
   text-decoration: none;
@@ -247,19 +256,22 @@ body {
 }
 
 .hero {
-  background-image: url("../images/index-background.jpg");
+  margin-top: 10px;
+}
+
+.hero-wrapper {
+  padding: 51px 0 82px 0;
+  background-color: #83b3d3;
+  background-image: url("../images/divider.png"), url("../images/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+  background-position: bottom;
+  margin-top: -11px;
 }
 
-.hero-logo-sedona {
+.hero-text {
   display: block;
   margin: 0 auto;
-  padding: 51px 371px 0;
-}
-
-.hero-logo-divider {
-  margin-top: 25px;
 }
 
 .advantages-reasons {
@@ -941,6 +953,22 @@ input::-webkit-inner-spin-button {
   background: #68a2ca;
 }
 
+.button-apply:focus {
+  background: #68a2ca;
+}
+
+.button-apply:active {
+  background: #82b3d3;
+}
+
+.button-apply:disabled {
+  background: #e5e5e5;
+}
+
+.subscribe-button:hover {
+  background: #68a2ca;
+}
+
 .subscribe-button:focus {
   background: #68a2ca;
 }
@@ -1057,26 +1085,24 @@ input::-webkit-inner-spin-button {
   border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
-.button-active-list {
-  border: 2px solid #000000;
-  border-radius: 4px;
-}
-
-.button-active-list:focus {
-  border: 2px solid #000000;
-  border-radius: 4px;
-}
-
-.button-active-list:focus {
-  border: 2px solid #68a2ca;
-  border-radius: 4px;
-}
-
 .filter-active-list,
 .filter-slider {
   position: relative;
   padding: 16px;
   fill: #000000;
+}
+
+.button-active-list {
+  border: 2px solid #000000;
+  border-radius: 4px;
+}
+
+.button-active-list:hover {
+  border: 2px solid #000000;
+}
+
+.button-active-list:focus {
+  border: 2px solid #68a2ca;
 }
 
 .button-slider,
@@ -1771,7 +1797,7 @@ input::-webkit-inner-spin-button {
 
 /* Кнопка найти */
 .search-result {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -1783,7 +1809,7 @@ input::-webkit-inner-spin-button {
 .search-result-modal {
   margin-top: 4px;
   margin-left: 160px;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1797,7 +1823,7 @@ input::-webkit-inner-spin-button {
   margin-top: 23px;
   padding: 18px 215px;
   text-decoration: none;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
