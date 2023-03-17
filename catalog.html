@@ -77,28 +77,30 @@
               <a class="breadcrumbs-link">Гостиницы</a>
             </li>
           </ol>
+
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
             <h2 class="visually-hidden">Список с фильтрами</h2>
+            <div class="catalog-filter-first-part">
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Инфраструктура:</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
-                  <label class="control-chekbox">
-                    <input class="visually-hidden control-input-chekbox" type="checkbox" name="swimming-pool" checked>
+                  <label for="swimming-pool" class="control-chekbox">
+                    <input class="visually-hidden control-input-chekbox" type="checkbox" name="swimming-pool" id="swimming-pool" checked>
                     <span class="control-mark-chekbox mark"></span>
                     <span class="control-label-chekbox">Бассейн</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
-                  <label class="control-chekbox">
-                    <input class="visually-hidden control-input-chekbox" type="checkbox" name="parking" checked>
+                  <label for="parking" class="control-chekbox">
+                    <input class="visually-hidden control-input-chekbox" type="checkbox" name="parking" id="parking" checked>
                     <span class="control-mark-chekbox mark"></span>
                     <span class="control-label-chekbox">Парковка</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
-                  <label class="control-chekbox">
-                    <input class="visually-hidden control-input-chekbox" type="checkbox" name="wi-fi">
+                  <label for="wi-fi" class="control-chekbox">
+                    <input class="visually-hidden control-input-chekbox" type="checkbox" name="wi-fi" id="wi-fi">
                     <span class="control-mark-chekbox mark"></span>
                     <span class="control-label-chekbox">Wi-Fi</span>
                   </label>
@@ -110,23 +112,23 @@
               <legend class="catalog-filter-title">Тип Жилья:</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
-                  <label class="control-radio">
-                    <input class="visually-hidden control-input-radio" type="radio" name="product-group" value="hotel"
+                  <label for="radio-hotel" class="control-radio">
+                    <input class="visually-hidden control-input-radio" type="radio" name="radio-hotel" id="radio-hotel" value="hotel"
                       checked>
                     <span class="control-mark-radio mark"></span>
                     <span class="control-label-radio">Гостиница</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
-                  <label class="control-radio">
-                    <input class="visually-hidden control-input-radio" type="radio" name="product-group" value="motel">
+                  <label for="radio-motel" class="control-radio">
+                    <input class="visually-hidden control-input-radio" type="radio" name="radio-motel" id="radio-motel" value="motel">
                     <span class="control-mark-radio mark"></span>
                     <span class="control-label-radio">Мотель</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
-                  <label class="control-radio">
-                    <input class="visually-hidden control-input-radio" type="radio" name="product-group"
+                  <label for="radio-apartments" class="control-radio">
+                    <input class="visually-hidden control-input-radio" type="radio" name="radio-apartments" id="radio-apartments"
                       value="apartments">
                     <span class="control-mark-radio mark"></span>
                     <span class="control-label-radio">Апартаменты</span>
@@ -134,21 +136,23 @@
                 </li>
               </ul>
             </fieldset>
+          </div>
+          <div class="catalog-filter-second-part">
             <fieldset class="catalog-filter-group price">
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
               <div class="amount-block">
-                <label class="amount">
-                  <input class="amount-input-one" type="number" name="minimum-value-summ" placeholder="0">
+                <label for="minimum-value-summ" class="amount">
+                  <input class="amount-input-one" type="number" name="minimum-value-summ" id="minimum-value-summ" placeholder="0">
                   <span class="from">от</span>
                 </label>
-                <label class="amount">
-                  <input class="amount-input-two" type="number" name="maximum-value-summ" placeholder="9000">
+                <label for="maximum-value-summ" class="amount">
+                  <input class="amount-input-two" type="number" name="maximum-value-summ" id="maximum-value-summ" placeholder="9000">
                   <span class="from">до</span>
                 </label>
               </div>
               <div class="range-block">
                 <div class="range-scale">
-                  <div class="range-bar" style="left: 0; width: 266px">
+                  <div class="range-bar">
                     <button class="range-toggle toggle-min">
                       <span class="visually-hidden">Изменить минимальную цену.</span>
                     </button>
@@ -165,6 +169,7 @@
               </button>
               <button class="button button-reset" type="reset">Сбросить</button>
             </div>
+          </div>
           </form>
         </header>
         <section class="catalog">
@@ -180,30 +185,38 @@
                 <option value="popular">Сначала популярные</option>
               </select>
             </div>
-            <a href="#" class="button button-active-list">
-              <svg class="filter-active-list" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+            <ul class="display-list">
+            <li>
+              <a href="#" class="button button-active-list">
+                <svg class="filter-active-list" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
                 width="16" height="14" fill="none" viewBox="0 0 16 14">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z" />
               </svg>
               <span class="visually-hidden">Показать карточки</span>
             </a>
-            <a class="button button-slider" href="#">
-              <svg class="filter-slider" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
-                width="16" height="14" fill="none" viewBox="0 0 16 14">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M16 12H0v2h16v-2ZM14 2v6H2V2h12Zm2-2H0v10h16V0Z" />
-              </svg>
-              <span class="visually-hidden">Показать слайдер</span>
-            </a>
-            <a class="button button-list" href="#">
-              <svg class="filter-list" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
-                width="16" height="14" fill="none" viewBox="0 0 16 14">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M2 0H0v2h2V0ZM16 0H4v2h12V0ZM2 4H0v2h2V4ZM16 4H4v2h12V4ZM2 8H0v2h2V8ZM16 8H4v2h12V8ZM2 12H0v2h2v-2ZM16 12H4v2h12v-2Z" />
-              </svg>
-              <span class="visually-hidden">Показать список</span>
-            </a>
-          </div>
+            </li>
+            <li>
+              <a class="button button-slider" href="#">
+                <svg class="filter-slider" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                  width="16" height="14" fill="none" viewBox="0 0 16 14">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M16 12H0v2h16v-2ZM14 2v6H2V2h12Zm2-2H0v10h16V0Z" />
+                </svg>
+                <span class="visually-hidden">Показать слайдер</span>
+              </a>
+            </li>
+            <li>
+              <a class="button button-list" href="#">
+                <svg class="filter-list" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                  width="16" height="14" fill="none" viewBox="0 0 16 14">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M2 0H0v2h2V0ZM16 0H4v2h12V0ZM2 4H0v2h2V4ZM16 4H4v2h12V4ZM2 8H0v2h2V8ZM16 8H4v2h12V8ZM2 12H0v2h2v-2ZM16 12H4v2h12v-2Z" />
+                </svg>
+                <span class="visually-hidden">Показать список</span>
+              </a>
+            </li>
+            </ul>
+            </div>
           <div class="product-card-container">
             <ol class="product-list">
               <li class="product-card">
@@ -218,9 +231,7 @@
                 </div>
                 <div class="product-cards-buttons-block">
                   <a class="product-card-button-more button" href="#">Подробнее</a>
-                  <button class="product-card-button-wishlist button">
-                    В избранное
-                  </button>
+                  <a class="product-card-button-wishlist button" href="#">В избранное</a>
                 </div>
                 <div class="product-rating-area">
                   <div class="rating-star-block">
@@ -416,9 +427,9 @@
               честное бойскаутское!
             </p>
             <form class="subscribe-catalog-form" action="https://echo.htmlacademy.ru/" method="post">
-              <label for="subscribe-email" class="subscribe-email"></label>
-              <input type="email" class="field-email" placeholder="Ваш e-mail" name="subscribe-email"
-                id="subscribe-email" required>
+              <label for="subscribe-email-catalog" class="subscribe-email"></label>
+              <input type="email" class="field-email" placeholder="Ваш e-mail" name="subscribe-email-catalog"
+                id="subscribe-email-catalog" required>
               <button class="button subscribe-button" type="submit">
                 Подписаться
               </button>
@@ -470,6 +481,7 @@
         </section>
         <div class="footer-logo-block">
           <a class="footer-developer-logo" href="https://htmlacademy.ru/">
+            <span class="visually-hidden">Логотип разработчика</span>
             <svg class="footer-logo" fill-rule="evenodd" clip-rule="evenodd" xmlns="http://www.w3.org/2000/svg"
               width="115" height="34" fill="none" viewBox="0 0 115 34">
               <path fill-rule="evenodd" clip-rule="evenodd"
